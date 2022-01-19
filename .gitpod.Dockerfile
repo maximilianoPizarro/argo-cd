@@ -21,7 +21,7 @@ RUN export K8S_VERSION=1.21.2
 #RUN curl -L -o kubebuilder.tar.gz https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH) && \
 #    tar xvzf kubebuilder.tar.gz
 
-RUN mv /usr/local/kubebuilder_2.3.1_linux_amd64 /usr/local/kubebuilder
+RUN mv kubebuilder_2.3.1_linux_amd64 /usr/local/kubebuilder
 
 RUN chmod +x kubebuilder 
 
