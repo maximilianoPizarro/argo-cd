@@ -12,7 +12,7 @@ RUN mkdir kubebuilder
 
 WORKDIR /usr/local/kubebuilder
 
-RUN curl -L -o kubebuilder_2.3.1_linux_amd64.tar.gz https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_linux_amd64.tar.gz | \
+RUN curl -L -o kubebuilder_2.3.1_linux_amd64.tar.gz https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_linux_amd64.tar.gz && \
     tar xvzf kubebuilder_2.3.1_linux_amd64.tar.gz
 
 RUN apt-get install redis-server -y
