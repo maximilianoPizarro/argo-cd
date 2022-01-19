@@ -12,14 +12,14 @@ RUN curl -o /usr/local/bin/kubectl -LO "https://dl.k8s.io/release/$(curl -L -s h
 
 #WORKDIR /usr/local/kubebuilder
 
-#RUN curl -L -o kubebuilder_2.3.1_linux_amd64.tar.gz https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_linux_amd64.tar.gz && \
-#    tar xvzf kubebuilder_2.3.1_linux_amd64.tar.gz
+RUN curl -L -o kubebuilder.tar.gz https://github.com/kubernetes-sigs/kubebuilder/releases/download/v2.3.1/kubebuilder_2.3.1_linux_amd64.tar.gz && \
+    tar xvzf kubebuilder.tar.gz
 
 RUN export K8S_VERSION=1.21.2
 
 # download kubebuilder and install locally.
-RUN curl -L -o kubebuilder.tar.gz https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH) && \
-    tar xvzf kubebuilder.tar.gz
+#RUN curl -L -o kubebuilder.tar.gz https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH) && \
+#    tar xvzf kubebuilder.tar.gz
 
 RUN chmod +x kubebuilder && mv kubebuilder /usr/local/ 
 
