@@ -19,7 +19,7 @@ RUN export K8S_VERSION=1.21.2
 
 # download kubebuilder and install locally.
 RUN curl -L -o kubebuilder https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)
-RUN chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
+RUN chmod +x kubebuilder && mv kubebuilder /usr/local/
 
 RUN apt-get install redis-server -y
 RUN go get github.com/mattn/goreman
