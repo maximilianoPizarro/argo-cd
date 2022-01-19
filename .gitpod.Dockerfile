@@ -23,7 +23,7 @@ RUN export K8S_VERSION=1.21.2
 
 RUN mv kubebuilder_2.3.1_linux_amd64 /usr/local/kubebuilder
 
-RUN chmod +x kubebuilder 
+#RUN chmod +x kubebuilder 
 
 RUN apt-get install redis-server -y
 RUN go get github.com/mattn/goreman
