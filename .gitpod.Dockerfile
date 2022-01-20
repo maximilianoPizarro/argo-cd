@@ -28,8 +28,8 @@ ENV PATH="/usr/local/kubebuilder/bin:${PATH}"
 RUN mkdir /usr/local/bin/argo
 
 # Download the binary
-RUN curl -L -o argo-linux-amd64.gz https://github.com/argoproj/argo-workflows/releases/download/v2.12.13/argo-linux-amd64.gz && \
-    tar xvzf argo-linux-amd64.gz
+RUN curl -L -o argo-linux-amd64.tar.gz https://github.com/argoproj/argo-workflows/releases/download/v2.12.13/argo-linux-amd64.tar.gz && \
+    tar xvzf argo-linux-amd64.tar.gz
 
 # Move binary to path
 RUN mv argo-linux-amd64/* /usr/local/bin/argo
