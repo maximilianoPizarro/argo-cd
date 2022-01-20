@@ -6,7 +6,7 @@ RUN curl -o /usr/local/bin/kubectl -LO "https://dl.k8s.io/release/$(curl -L -s h
     chmod +x /usr/local/bin/kubectl
 
 ENV K8S_VERSION=1.21.2
-ENV ARGO_VERSION=v2.12.13
+ENV ARGO_VERSION=v3.2.6
 
 #kubebuilder
 RUN mkdir /usr/local/kubebuilder
@@ -32,7 +32,7 @@ RUN curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.2.
     gunzip argo-linux-amd64.gz
 
 # Move binary to path
-RUN mv argo-linux-amd64/* /usr/local/bin/argo
+RUN mv ./argo-linux-amd64 /usr/local/bin/argo
 
 
 RUN apt-get install redis-server -y
